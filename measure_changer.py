@@ -34,7 +34,7 @@ def dkg_to_gram(dkg):
 
 
 def display_result(result, amount, original_measure, target_measure):
-    print(str(amount) + original_measure + " = " + str(int(result)) + target_measure)
+    print(str(amount) + original_measure + " = " + str(float(result)) + target_measure)
 
 
 def main():
