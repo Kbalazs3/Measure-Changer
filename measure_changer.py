@@ -8,12 +8,12 @@ def ask_amount():
 
 
 def ask_original_measure():
-    or_measure = input("original: ")
+    or_measure = input("Please enter the original measure: ")
     return or_measure
 
 
 def ask_target_measure():
-    measure = input("add measure:")
+    measure = input("Please enter the target measure: ")
     return measure
 
 
@@ -30,7 +30,7 @@ def dkg_to_gram(dkg):
 
 
 def display_result(result):
-    print(result)
+    print(int(result))
 
 
 def main():
