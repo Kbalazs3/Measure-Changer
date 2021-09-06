@@ -21,6 +21,10 @@ def change_gram_to_kg(gram):
     return int(gram) / 1000
 
 
+def change_kg_to_gram(kg):
+    return int(kg) * 1000
+
+
 def dkg_to_kg(dkg):
     return dkg * 100
 
@@ -40,6 +44,9 @@ def main():
     if original == ('g' or original == "gram") and target == 'kg':
         gram_kg_result = change_gram_to_kg(amount)
         display_result(gram_kg_result)
+    elif original == 'kg' and (target == 'g' or target == 'gram'):
+        kg_to_gram = change_kg_to_gram(amount)
+        display_result(kg_to_gram)
 
 
 if __name__ == '__main__':
