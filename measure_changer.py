@@ -29,6 +29,10 @@ def dkg_to_kg(dkg):
     return int(dkg) / 100
 
 
+def kg_to_dkg(kg):
+    return int(kg) * 100
+
+
 def dkg_to_gram(dkg):
     return dkg * 10
 
@@ -50,6 +54,9 @@ def main():
     elif original == 'dkg' and target == 'kg':
         dkg_to_kg_result = dkg_to_kg(amount)
         display_result(dkg_to_kg_result, amount, original, target)
+    elif original == 'kg' and target == 'dkg':
+        kg_to_dkg_result = kg_to_dkg(amount)
+        display_result(kg_to_dkg_result, amount, original, target)
 
 
 if __name__ == '__main__':
