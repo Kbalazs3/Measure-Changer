@@ -13,8 +13,8 @@ def ask_original_measure():
 
 
 def ask_target_measure():
-    measure = input("Please enter the target measure: ")
-    return measure
+    target_measure = input("Please enter the target measure: ")
+    return target_measure
 
 
 def change_gram_to_kg(gram):
@@ -26,15 +26,15 @@ def change_kg_to_gram(kg):
 
 
 def dkg_to_kg(dkg):
-    return dkg * 100
+    return int(dkg) / 100
 
 
 def dkg_to_gram(dkg):
     return dkg * 10
 
 
-def display_result(result):
-    print(int(result))
+def display_result(result, amount, original_measure, target_measure):
+    print(str(amount) + original_measure + " = " + str(int(result)) + target_measure)
 
 
 def main():
@@ -43,10 +43,13 @@ def main():
     amount = ask_amount()
     if original == ('g' or original == "gram") and target == 'kg':
         gram_kg_result = change_gram_to_kg(amount)
-        display_result(gram_kg_result)
+        display_result(gram_kg_result, amount, original, target)
     elif original == 'kg' and (target == 'g' or target == 'gram'):
         kg_to_gram = change_kg_to_gram(amount)
-        display_result(kg_to_gram)
+        display_result(kg_to_gram, amount, original, target)
+    elif original == 'dkg' and target == 'kg':
+        dkg_to_kg_result = dkg_to_kg(amount)
+        display_result(dkg_to_kg_result, amount, original, target)
 
 
 if __name__ == '__main__':
