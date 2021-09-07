@@ -8,7 +8,7 @@ def main():
     original = input.ask_original_measure().lower()
     target = input.ask_target_measure()
     amount_to_change = input.ask_amount()
-
+    # Mass
     if original == ('g' or original == "gram") and target == 'kg':
         gram_kg_result = mass.change_gram_to_kg(amount_to_change)
         display.display_result(gram_kg_result, amount_to_change, original, target)
@@ -29,9 +29,18 @@ def main():
         cm_to_m_result = length.m_to_cm(amount_to_change)
         display.display_result(cm_to_m_result, amount_to_change, original, target)
     elif original == 'cm' and target == 'dm':
-        cm_to_dm_result = length.cm_to_dm(cm)
+        cm_to_dm_result = length.cm_to_dm(amount_to_change)
         display.display_result(cm_to_dm_result, amount_to_change, original, target)
-
+    elif original == 'dm' and target == 'cm':
+        dm_to_cm_result = length.dm_to_cm(amount_to_change)
+        display.display_result(dm_to_cm_result, amount_to_change, original, target)
+    elif original == 'm' and target == 'km':
+        m_to_km_result = length.m_to_km(amount_to_change)
+        display.display_result(m_to_km_result, amount_to_change, original, target)
+    elif original == 'km' and target == 'm':
+        km_to_m_result = length.m_to_km(amount_to_change)
+        display.display_result(km_to_m_result, amount_to_change, original, target)
+    # Speed
 
 if __name__ == '__main__':
     main()
