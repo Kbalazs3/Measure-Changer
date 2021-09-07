@@ -5,7 +5,7 @@ import input
 
 
 def main():
-    original = input.ask_original_measure()
+    original = input.ask_original_measure().lower()
     target = input.ask_target_measure()
     amount = input.ask_amount()
     if original == ('g' or original == "gram") and target == 'kg':
@@ -20,6 +20,9 @@ def main():
     elif original == 'kg' and target == 'dkg':
         kg_to_dkg_result = mass.kg_to_dkg(amount)
         display.display_result(kg_to_dkg_result, amount, original, target)
+    elif original == 'm' and target == 'cm':
+        m_to_cm_result = length.m_to_cm(amount)
+        display.display_result(m_to_cm_result, amount, original, target)
 
 
 if __name__ == '__main__':
