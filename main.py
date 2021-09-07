@@ -1,5 +1,6 @@
 import mass
 import length
+import speed
 import display
 import input
 
@@ -41,6 +42,14 @@ def main():
         km_to_m_result = length.m_to_km(amount_to_change)
         display.display_result(km_to_m_result, amount_to_change, original, target)
     # Speed
+    elif original == 'km/h' and target == 'm/sec':
+        km_per_hour_to_m_per_sec = speed.km_per_hour_tom_per_sec(amount_to_change)
+        display.display_result(km_per_hour_to_m_per_sec, amount_to_change, original, target)
+    elif original == 'm/sec' and target == 'km/h':
+        m_per_sec_to_km_per_hour = speed.km_per_hour_tom_per_sec(amount_to_change)
+        display.display_result(m_per_sec_to_km_per_hour, amount_to_change, original, target)
+    # Time
+    
 
 if __name__ == '__main__':
     main()
