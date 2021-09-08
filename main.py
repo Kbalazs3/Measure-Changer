@@ -50,8 +50,12 @@ def main():
         m_per_sec_to_km_per_hour = speed.km_per_hour_tom_per_sec(amount_to_change)
         display.display_result(m_per_sec_to_km_per_hour, amount_to_change, original, target)
     # Time
-    elif original == 'sec' and target == 'min':
-        sec_to_min_result =
+    elif (original == 'sec' or original== 'second') and (target == 'min' or target == 'minute'):
+        sec_to_min_result = time_changer.sec_to_minute(amount_to_change)
+        display.display_result(sec_to_min_result, amount_to_change, original, target)
+    elif (original == 'min' or original == 'minute') and (target == 'sec' or target == 'second'):
+        min_to_sec_result = time_changer.minute_to_sec(amount_to_change)
+        display.display_result(min_to_sec_result, amount_to_change, original, target)
 
 
 if __name__ == '__main__':
