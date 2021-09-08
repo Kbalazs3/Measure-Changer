@@ -10,3 +10,7 @@ def start_menu_display():
           "Measure Changer" + "\n" + "START MENU" + "\n\n" + "Start -> Press S" + "\n"
           + "Description -> Press D" + "\n"
           "Quit -> Press Q" + "\n\n")
+
+
+def program_description_display():
+    print("\n\n\nThis program can change, masses, lengths, time, speed\n\n")

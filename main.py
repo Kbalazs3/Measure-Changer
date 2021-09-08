@@ -12,11 +12,17 @@ def start_menu():
     print("\n")
     if s_menu_c in ['s', 'start']:
         main()
-    elif s_menu_c in ['s', 'start']:
-        # Program description runs TODO
-        pass
+    elif s_menu_c in ['d', 'description']:
+        program_description()
     elif s_menu_c in ['q', 'quit']:
         quit(0)
+
+
+def program_description():
+    display.program_description_display()
+    back_to_main = input.back_to_main_menu()
+    if back_to_main == 'back':
+        start_menu()
 
 
 def main():
@@ -70,6 +76,8 @@ def main():
     elif (original == 'min' or original == 'minute') and (target == 'sec' or target == 'second'):
         min_to_sec_result = time_changer.minute_to_sec(amount_to_change)
         display.display_result(min_to_sec_result, amount_to_change, original, target)
+    elif original in ['quit', 'Quit'] or target in ['quit', 'Quit']:
+        exit(0)
 
 
 if __name__ == '__main__':

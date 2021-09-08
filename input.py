@@ -19,3 +19,8 @@ def ask_target_measure():
 def ask_star_menu_command():
     start_menu_command = input("Start Menu command: ")
     return start_menu_command
+
+
+def back_to_main_menu():
+    back_to_menu = input('You can step back to the main menu by entering "back": ').lower()
+    return back_to_menu
