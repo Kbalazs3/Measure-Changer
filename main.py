@@ -1,6 +1,7 @@
 import mass
 import length
 import speed
+import time_changer
 import display
 import input
 
@@ -49,7 +50,9 @@ def main():
         m_per_sec_to_km_per_hour = speed.km_per_hour_tom_per_sec(amount_to_change)
         display.display_result(m_per_sec_to_km_per_hour, amount_to_change, original, target)
     # Time
-    
+    elif original == 'sec' and target == 'min':
+        sec_to_min_result =
+
 
 if __name__ == '__main__':
     main()
