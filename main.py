@@ -6,10 +6,24 @@ import display
 import input
 
 
+def start_menu():
+    display.start_menu_display()
+    s_menu_c = input.ask_star_menu_command().lower()
+    print("\n")
+    if s_menu_c in ['s', 'start']:
+        main()
+    elif s_menu_c in ['s', 'start']:
+        # Program description runs TODO
+        pass
+    elif s_menu_c in ['q', 'quit']:
+        quit(0)
+
+
 def main():
     original = input.ask_original_measure().lower()
     target = input.ask_target_measure()
     amount_to_change = input.ask_amount()
+
     # Mass
     if original == ('g' or original == "gram") and target == 'kg':
         gram_kg_result = mass.change_gram_to_kg(amount_to_change)
@@ -59,4 +73,5 @@ def main():
 
 
 if __name__ == '__main__':
+    start_menu()
     main()
