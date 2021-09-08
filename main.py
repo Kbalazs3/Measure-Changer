@@ -29,7 +29,8 @@ def main():
     original = input.ask_original_measure().lower()
     target = input.ask_target_measure()
     amount_to_change = input.ask_amount()
-
+    while not amount_to_change.isnumeric():
+        amount_to_change = input.ask_amount()
     # Mass
     if original == ('g' or original == "gram") and target == 'kg':
         gram_kg_result = mass.change_gram_to_kg(amount_to_change)
@@ -82,4 +83,4 @@ def main():
 
 if __name__ == '__main__':
     start_menu()
-    main()
+
