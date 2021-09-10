@@ -15,7 +15,7 @@ def ask_target_measure():
 
 
 def ask_star_menu_command():
-    start_menu_command = input("Start Menu command: ")
+    start_menu_command = input("\t\t\t\t\t\t\t\tStart Menu command: ")
     return start_menu_command
 
 

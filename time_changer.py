@@ -19,3 +19,7 @@ def sec_to_minute(sec):
 def day_to_hour(day):
     return int(day) * 24
 
+
+def hour_to_day(hour):
+    return int(hour) / 24
+

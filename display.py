@@ -5,11 +5,11 @@ def display_result(result, amount, original_measure, target_measure):
 
 
 def start_menu_display():
-    to_middle = "\t\t\t\t"
-    print(to_middle + to_middle +
-          "Measure Changer" + "\n" + "START MENU" + "\n\n" + "Start -> Press S" + "\n"
-          + "Description -> Press D" + "\n"
-          "Quit -> Press Q" + "\n\n")
+    to_middle = "\t\t\t\t\t\t\t\t"
+    print(2 * to_middle +
+          "Measure Changer" + "\n\n" + 2 * to_middle + "START MENU" + "\n\n"+ 2 * to_middle + "Start -> Press S" + "\n"
+          + 2 * to_middle + "Description -> Press D" + "\n"
+          + 2 * to_middle + "Quit -> Press Q" + "\n\n")
 
 
 def program_description_display():

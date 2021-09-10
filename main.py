@@ -30,6 +30,7 @@ def main():
     target = input.ask_target_measure()
     amount_to_change = input.ask_amount()
     while not amount_to_change.isnumeric():
+        print("That's not a number!\nPlease enter a number!")
         amount_to_change = input.ask_amount()
     # Mass
     if original == ('g' or original == "gram") and target == 'kg':
@@ -77,8 +78,21 @@ def main():
     elif (original == 'min' or original == 'minute') and (target == 'sec' or target == 'second'):
         min_to_sec_result = time_changer.minute_to_sec(amount_to_change)
         display.display_result(min_to_sec_result, amount_to_change, original, target)
+    elif original == 'min' and target == 'hour':
+        min_to_hour = time_changer.minute_to_hour(amount_to_change)
+        display.display_result(min_to_hour, amount_to_change, original, target)
+    elif (original == 'hour' or 'h') and (target == 'min' or target == 'minute'):
+        hour_to_min_result = time_changer.hour_to_minute(amount_to_change)
+        display.display_result(hour_to_min_result, amount_to_change, original, target)
+    elif original == 'day' and target == 'hour':
+        day_to_hour_result = time_changer.day_to_hour(amount_to_change)
+        display.display_result(day_to_hour_result, amount_to_change, original, target)
+    elif original == 'hour' and target == 'day':
+        hour_to_day_result = time_changer.hour_to_day(amount_to_change)
+        display.display_result(hour_to_day_result, amount_to_change, original, target)
+    # Exit from program
     elif original in ['quit', 'Quit'] or target in ['quit', 'Quit']:
-        exit(0)
+        quit(0)
 
 
 if __name__ == '__main__':
