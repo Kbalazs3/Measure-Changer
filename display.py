@@ -6,7 +6,10 @@ def to_middle():
 
 def display_result(result, amount, original_measure, target_measure):
     middle = to_middle()
-    print("\n" + middle + str(amount) + original_measure + " = " + str(float(result)) + target_measure)
+    if result % 1 != 0:
+        print("\n" + middle + str(amount) + original_measure + " = " + str(float(result)) + target_measure)
+    else:
+        print("\n" + middle + str(amount) + original_measure + " = " + str(int(result)) + target_measure)
 
 
 def start_menu_display():
