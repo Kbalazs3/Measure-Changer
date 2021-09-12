@@ -23,3 +23,11 @@ def day_to_hour(day):
 def hour_to_day(hour):
     return int(hour) / 24
 
+
+def days_to_week(day):
+    return int(day) / 7
+
+
+def week_to_days(week):
+    return int(week) * 7
+

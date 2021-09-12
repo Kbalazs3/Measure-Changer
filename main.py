@@ -90,6 +90,9 @@ def main():
     elif original == 'hour' and target == 'day':
         hour_to_day_result = time_changer.hour_to_day(amount_to_change)
         display.display_result(hour_to_day_result, amount_to_change, original, target)
+    elif (original == 'day' or original == 'days') and (target == 'week' or target == 'weeks'):
+        day_to_week_result = time_changer.days_to_week(amount_to_change)
+        display.display_result(day_to_week_result, amount_to_change, original, target)
     # Exit from program
     elif original in ['quit', 'Quit'] or target in ['quit', 'Quit']:
         quit(0)
